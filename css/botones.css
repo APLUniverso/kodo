@@ -1,0 +1,82 @@
+.btn{
+    position: relative;
+
+    background-color: #1B1A55;
+    color: #535C91;
+    box-shadow: 5px 5px 2px 0px #535C91;
+    padding: 10px;
+
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/*CODIGO PARA EL EFECTO DE GLITCH*/
+.btn::before,
+.btn::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 10px;
+
+    font: inherit;
+    text-align: center;
+    line-height: normal;
+
+    overflow: hidden;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.btn:hover::before {
+    opacity: 1;
+    left: 1px;
+    text-shadow: -2px 0 red;
+    animation: glitch-animation-1 1s linear infinite alternate-reverse;
+}
+
+.btn:hover::after {
+    opacity: 1;
+    left: -1px;
+    text-shadow: -2px 0 blue;
+    animation: glitch-animation-2 1s linear infinite alternate-reverse;
+}
+
+/*CODIGO DE PRESION DE BOTON*/
+.btn:focus{
+    transform: translateY(8px);
+    box-shadow: 1px 1px 2px 0px #000000;
+}
+
+/* ANIMACIONES DE GLITCH */
+@keyframes glitch-animation-1 {
+    0%   { clip: rect(20px, 350px, 90px, 30px); }
+    10%  { clip: rect(80px, 350px, 40px, 30px); }
+    20%  { clip: rect(10px, 350px, 100px, 30px); }
+    30%  { clip: rect(60px, 350px, 20px, 30px); }
+    40%  { clip: rect(30px, 350px, 120px, 30px); }
+    50%  { clip: rect(90px, 350px, 60px, 30px); }
+    60%  { clip: rect(25px, 350px, 80px, 30px); }
+    70%  { clip: rect(70px, 350px, 30px, 30px); }
+    80%  { clip: rect(40px, 350px, 110px, 30px); }
+    90%  { clip: rect(100px, 350px, 50px, 30px); }
+    100% { clip: rect(60px, 350px, 90px, 30px); }
+}
+
+@keyframes glitch-animation-2 {
+    0%   { clip: rect(90px, 350px, 30px, 30px); }
+    10%  { clip: rect(40px, 350px, 100px, 30px); }
+    20%  { clip: rect(70px, 350px, 20px, 30px); }
+    30%  { clip: rect(10px, 350px, 80px, 30px); }
+    40%  { clip: rect(100px, 350px, 40px, 30px); }
+    50%  { clip: rect(30px, 350px, 120px, 30px); }
+    60%  { clip: rect(80px, 350px, 50px, 30px); }
+    70%  { clip: rect(20px, 350px, 90px, 30px); }
+    80%  { clip: rect(110px, 350px, 60px, 30px); }
+    90%  { clip: rect(50px, 350px, 100px, 30px); }
+    100% { clip: rect(70px, 350px, 30px, 30px); }
+}

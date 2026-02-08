@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Encriptar</title>
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../media/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../media/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../media/favicon/site.webmanifest">
+
+    <!-- FONT FAMILY -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Share+Tech+Mono">
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="../css/encriptar.css">
+    <link rel="stylesheet" href="../css/botones.css">
+</head>
+<body>
+    <a href="../index.html" class="btn volver">Volver</a>
+    <main>
+        <form action="#" id="formNumero">
+            <label for="numero">Numero:</label>
+            <input type="text" id="numero" inputmode="numeric" pattern="[0-9]*" placeholder="Ingrese el numero">
+            <button class="btn revelar" type="submit">Revelar</button>
+        </form>
+        <canvas id="canvas"></canvas>
+    </main>
+
+    <script src="../javaScript/transformacion.js"></script>
+</body>
+</html>
